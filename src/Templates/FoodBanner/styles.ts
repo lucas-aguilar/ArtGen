@@ -1,10 +1,17 @@
 import styled from 'styled-components';
-import productImg from '../../assets/images/burguer.jpg';
+import prodImg from '../../assets/images/burguer.jpg';
 
-interface StyleProps {
+interface CustomLogoProps {
   logoSize: any;
   logoYPosition: any;
   logoXPosition: any;
+}
+
+interface CustomImgProps {
+  productImg: any;
+  imgSize: any;
+  imgPositionX: any;
+  imgPositionY: any;
 }
 
 export const FrameContainer = styled.div`
@@ -27,7 +34,7 @@ export const Shape1 = styled.div`
   width: 0;
   z-index: 10;
 `;
-export const CustomLogo = styled.span<StyleProps>`
+export const CustomLogo = styled.span<CustomLogoProps>`
   color: #fff;
   font-size: 46px;
   left: ${(props) => props.logoXPosition || '-15px'};
@@ -40,10 +47,11 @@ export const CustomLogo = styled.span<StyleProps>`
     width: ${(props) => props.logoSize || '75px'};
   }
 `;
-export const CustomImg = styled.div`
-  background-image: url(${productImg});
-  background-size: cover;
-  background-position: right;
+export const CustomImg = styled.div<CustomImgProps>`
+  background-image: url(${(props) => props.productImg || prodImg});
+  background-size: ${(props) => props.imgSize || 'cover'};
+  background-position: ${(props) =>
+    props.imgPositionX + ' ' + props.imgPositionY};
   height: 540px;
   position: absolute;
   width: 540px;
