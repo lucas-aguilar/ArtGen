@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/ArtGen/static/js/main.ad06b340.chunk.js",
+    "main.js.map": "/ArtGen/static/js/main.ad06b340.chunk.js.map",
+    "runtime-main.js": "/ArtGen/static/js/runtime-main.98de142c.js",
+    "runtime-main.js.map": "/ArtGen/static/js/runtime-main.98de142c.js.map",
+    "static/js/2.afc87ae4.chunk.js": "/ArtGen/static/js/2.afc87ae4.chunk.js",
+    "static/js/2.afc87ae4.chunk.js.map": "/ArtGen/static/js/2.afc87ae4.chunk.js.map",
+    "index.html": "/ArtGen/index.html",
+    "precache-manifest.8c6ca992cef09d0a5bbeec93bc27bd63.js": "/ArtGen/precache-manifest.8c6ca992cef09d0a5bbeec93bc27bd63.js",
+    "service-worker.js": "/ArtGen/service-worker.js",
+    "static/js/2.afc87ae4.chunk.js.LICENSE.txt": "/ArtGen/static/js/2.afc87ae4.chunk.js.LICENSE.txt",
+    "static/media/burguer.jpg": "/ArtGen/static/media/burguer.012db217.jpg",
+    "static/media/mcdonalds-logo.png": "/ArtGen/static/media/mcdonalds-logo.9b4b9b04.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.98de142c.js",
+    "static/js/2.afc87ae4.chunk.js",
+    "static/js/main.ad06b340.chunk.js"
+  ]
+}
