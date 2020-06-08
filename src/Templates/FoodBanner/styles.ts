@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import productImg from '../../assets/images/burguer.jpg';
 
-export const BannerFrame = styled.div`
+interface StyleProps {
+  logoSize: any;
+  logoYPosition: any;
+  logoXPosition: any;
+}
+
+export const FrameContainer = styled.div`
   border: 1px solid #333;
   height: 540px;
   overflow: hidden;
@@ -21,17 +27,17 @@ export const Shape1 = styled.div`
   width: 0;
   z-index: 10;
 `;
-export const CustomLogo = styled.span`
+export const CustomLogo = styled.span<StyleProps>`
   color: #fff;
   font-size: 46px;
-  left: -15px;
+  left: ${(props) => props.logoXPosition || '-15px'};
   position: absolute;
   text-transform: uppercase;
-  top: -125px;
+  top: ${(props) => props.logoYPosition || '-125px'};
   z-index: 11;
   img {
     height: auto;
-    width: 75px;
+    width: ${(props) => props.logoSize || '75px'};
   }
 `;
 export const CustomImg = styled.div`
