@@ -14,6 +14,18 @@ interface CustomImgProps {
   imgPositionY: any;
 }
 
+interface CustomShapeProps {
+  color: any;
+}
+
+interface CustomTextProps {
+  color: any;
+  fontSize: any;
+  fontWeight: any;
+  right: any;
+  top: any;
+}
+
 export const FrameContainer = styled.div`
   border: 1px solid #333;
   height: 540px;
@@ -23,12 +35,14 @@ export const FrameContainer = styled.div`
 `;
 export const FrameControls = styled.div`
   border: 1px solid #333;
+  height: 640px;
+  overflow: auto;
   width: 100%;
 `;
-export const Shape1 = styled.div`
+export const Shape1 = styled.div<CustomShapeProps>`
   border-left: 105px solid transparent;
   border-right: 255px solid transparent;
-  border-top: 135px solid #fe0000;
+  border-top: 135px solid ${(props) => props.color || '#fe0000'};
   height: 0;
   position: absolute;
   width: 0;
@@ -57,8 +71,8 @@ export const CustomImg = styled.div<CustomImgProps>`
   width: 540px;
   z-index: 1;
 `;
-export const Shape2 = styled.div`
-  border-bottom: 385px solid #fe0000;
+export const Shape2 = styled.div<CustomShapeProps>`
+  border-bottom: 385px solid ${(props) => props.color || '#fe0000'};
   border-left: 420px solid transparent;
   bottom: -2px;
   height: 0;
@@ -83,43 +97,48 @@ export const PostText = styled.span`
   position: absolute;
   text-transform: uppercase;
 `;
-export const PostTitleWord1 = styled(PostText)`
-  font-size: 42px;
-  right: 30px;
-  top: 105px;
+export const PostTextLine1 = styled(PostText)<CustomTextProps>`
+  color: ${(props) => props.color || '#fff'};
+  font-size: ${(props) => props.fontSize || '42px'};
+  font-weight: ${(props) => props.fontWeight || 'normal'};
+  right: ${(props) => props.right || '30px'};
+  top: ${(props) => props.top || '105px'};
 `;
-export const PostTitleWord2 = styled(PostText)`
-  color: #000;
-  font-size: 34px;
-  right: 42px;
-  top: 150px;
+export const PostTextLine2 = styled(PostText)<CustomTextProps>`
+  color: ${(props) => props.color || '#000'};
+  font-size: ${(props) => props.fontSize || '34px'};
+  font-weight: ${(props) => props.fontWeight || 'normal'};
+  right: ${(props) => props.right || '42px'};
+  top: ${(props) => props.top || '150px'};
 `;
-export const PostTitleWord3 = styled(PostText)`
-  font-size: 40px;
-  font-weight: bold;
-  right: 14px;
-  top: 192px;
+export const PostTextLine3 = styled(PostText)<CustomTextProps>`
+  color: ${(props) => props.color || '#fff'};
+  font-size: ${(props) => props.fontSize || '40px'};
+  font-weight: ${(props) => props.fontWeight || 'bold'};
+  right: ${(props) => props.right || '14px'};
+  top: ${(props) => props.top || '192px'};
 `;
-export const PostTitleWord4 = styled(PostText)`
-  font-size: 52px;
-  font-weight: bold;
-  right: 15px;
-  top: 230px;
+export const PostTextLine4 = styled(PostText)<CustomTextProps>`
+  color: ${(props) => props.color || '#fff'};
+  font-size: ${(props) => props.fontSize || '52px'};
+  font-weight: ${(props) => props.fontWeight || 'bold'};
+  right: ${(props) => props.right || '15px'};
+  top: ${(props) => props.top || '230px'};
 `;
-export const PostTitleCta = styled(PostText)`
+export const PostTitleCta = styled(PostText)<CustomTextProps>`
   align-items: center;
   background-color: #000;
   border-radius: 40px;
-  color: #fff;
+  color: ${(props) => props.color || '#fff'};
   display: flex;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: ${(props) => props.fontSize || '18px'};
+  font-weight: ${(props) => props.fontWeight || 'bold'};
   justify-content: center;
   height: 40px;
   position: absolute;
-  right: 45px;
+  right: ${(props) => props.right || '45px'};
   text-transform: uppercase;
-  top: 310px;
+  top: ${(props) => props.top || '310px'};
   width: 180px;
 `;
 export const Postlink = styled.div`
