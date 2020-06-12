@@ -35,7 +35,7 @@ export const FrameContainer = styled.div`
 `;
 export const FrameControls = styled.div`
   border: 1px solid #333;
-  height: 640px;
+  height: 540px;
   overflow: auto;
   width: 100%;
 `;
@@ -115,6 +115,7 @@ export const PostTextLine3 = styled(PostText)<CustomTextProps>`
   color: ${(props) => props.color || '#fff'};
   font-size: ${(props) => props.fontSize || '40px'};
   font-weight: ${(props) => props.fontWeight || 'bold'};
+  min-width: 180px;
   right: ${(props) => props.right || '14px'};
   top: ${(props) => props.top || '192px'};
 `;
@@ -122,6 +123,7 @@ export const PostTextLine4 = styled(PostText)<CustomTextProps>`
   color: ${(props) => props.color || '#fff'};
   font-size: ${(props) => props.fontSize || '52px'};
   font-weight: ${(props) => props.fontWeight || 'bold'};
+  min-width: 260px;
   right: ${(props) => props.right || '15px'};
   top: ${(props) => props.top || '230px'};
 `;
@@ -134,12 +136,13 @@ export const PostTitleCta = styled(PostText)<CustomTextProps>`
   font-size: ${(props) => props.fontSize || '18px'};
   font-weight: ${(props) => props.fontWeight || 'bold'};
   justify-content: center;
-  height: 40px;
+  /* height: 40px; */
   position: absolute;
   right: ${(props) => props.right || '45px'};
   text-transform: uppercase;
   top: ${(props) => props.top || '310px'};
-  width: 180px;
+  min-width: 200px;
+  padding: 8px 20px;
 `;
 export const Postlink = styled.div`
   align-items: center;
