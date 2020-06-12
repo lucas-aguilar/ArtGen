@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "614ee04d8d6973083ad0017170588b05",
+    "revision": "a9dedc832c0d02008af8b950121724ba",
     "url": "/ArtGen/index.html"
   },
   {
-    "revision": "943666ba76482c6ba97a",
-    "url": "/ArtGen/static/js/2.afc87ae4.chunk.js"
+    "revision": "f86008ff61539d2183d9",
+    "url": "/ArtGen/static/js/2.be04a3aa.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/ArtGen/static/js/2.afc87ae4.chunk.js.LICENSE.txt"
+    "url": "/ArtGen/static/js/2.be04a3aa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5f5b3711c92f33eeef73",
-    "url": "/ArtGen/static/js/main.ad06b340.chunk.js"
+    "revision": "7e04c33e7990a6b6fe02",
+    "url": "/ArtGen/static/js/main.00b96fa0.chunk.js"
   },
   {
     "revision": "c6f498d88f8e3b825ddb",
